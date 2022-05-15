@@ -1,0 +1,51 @@
+﻿@model ProjectSoPro.Models.PersonRoles
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PersonRoles</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="actors" class="control-label"></label>
+                <select asp-for="actors" class ="form-control" asp-items="ViewBag.Personid"></select>
+      
+            </div>
+            <div class="form-group">
+                <label asp-for="directors" class="control-label"></label>
+                <select asp-for="directors" class ="form-control" asp-items="ViewBag.Personid"></select>
+        
+            </div>
+            <div class="form-group">
+                <label asp-for="producers" class="control-label"></label>
+                <select asp-for="producers" class ="form-control" asp-items="ViewBag.Personid"></select>
+            
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Movieid" class="control-label"></label>
+                <select asp-for="Movie.Movieid" class ="form-control" asp-items="ViewBag.Movieid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Personid" class="control-label"></label>
+                <select asp-for="Person.Personid" class ="form-control" asp-items="ViewBag.Personid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
