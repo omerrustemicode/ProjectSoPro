@@ -1,5 +1,5 @@
 # Hi,Here are some instructions on how to use the project
-Create database
+Create database.
 Go to appsettings.json and change ConnectionString
 open Package Manager Console
 enter: add-migration NameOfMigration
